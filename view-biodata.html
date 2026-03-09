@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Biodata</title>
+<link rel="stylesheet" href="Css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>
+
+<body class="view-page" onload="loadBiodata()">
+
+<div class="container">
+
+<div class="header">
+<h2>BIO-DATA</h2>
+<div class="photo-box">PHOTO</div>
+</div>
+
+<!-- PERSONAL DATA -->
+<div class="card-title">PERSONAL DATA</div>
+
+<div class="category">
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Position Desired</div>
+<div class="value" id="vposition"></div>
+</div>
+
+<div class="field">
+<div class="label">Date</div>
+<div class="value" id="vdate"></div>
+</div>
+</div>
+
+<div class="inline-row">
+
+<div class="field">
+<div class="label">Name</div>
+<div class="value" id="vname"></div>
+</div>
+
+<div class="field">
+<div class="label">Gender</div>
+<div class="value" id="vgender"></div>
+</div>
+
+</div>
+
+<div class="field">
+<div class="label">City Address</div>
+<div class="value" id="vcity"></div>
+</div>
+
+<div class="field">
+<div class="label">Provincial Address</div>
+<div class="value" id="vprovince"></div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Telephone</div>
+<div class="value" id="vtelephone"></div>
+</div>
+
+<div class="field">
+<div class="label">Cellphone</div>
+<div class="value" id="vcellphone"></div>
+</div>
+</div>
+
+<div class="field">
+<div class="label">Email address</div>
+<div class="value" id="vemail"></div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Date of Birth</div>
+<div class="value" id="vbirth"></div>
+</div>
+
+<div class="field">
+<div class="label">Place of Birth</div>
+<div class="value" id="vbirthplace"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Civil Status</div>
+<div class="value" id="vcivil"></div>
+</div>
+
+<div class="field">
+<div class="label">Citizenship</div>
+<div class="value" id="vcitizenship"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Height</div>
+<div class="value" id="vheight"></div>
+</div>
+
+<div class="field">
+<div class="label">Weight</div>
+<div class="value" id="vweight"></div>
+</div>
+</div>
+
+
+<div class="field">
+<div class="label">Religion</div>
+<div class="value" id="vreligion"></div>
+</div>
+
+<div class="inline-row">
+
+<div class="field">
+<div class="label">Spouse</div>
+<div class="value" id="vspouse"></div>
+</div>
+
+<div class="field">
+<div class="label">Occupation</div>
+<div class="value" id="voccupation"></div>
+</div>
+
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Name of Children</div>
+<div class="value" id="vchild1"></div>
+</div>
+
+<div class="field">
+<div class="label">Date of Birth</div>
+<div class="value" id="vchildBirth1"></div>
+</div>
+</div>
+
+<!-- ADD 2 MORE UNDERLINES BELOW (NO LAYOUT CHANGE) -->
+
+<div class="inline-row">
+<div class="field">
+<div class="label"></div>
+<div class="value" id="vchild2"></div>
+</div>
+
+<div class="field">
+<div class="label"></div>
+<div class="value" id="vchildBirth2"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label"></div>
+<div class="value" id="vchild3"></div>
+</div>
+
+<div class="field">
+<div class="label"></div>
+<div class="value" id="vchildBirth3"></div>
+</div>
+</div>
+
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Father's Name</div>
+<div class="value" id="vfather"></div>
+</div>
+
+<div class="field">
+<div class="label">Father's Occupation</div>
+<div class="value" id="vfatherjob"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Mother's Name</div>
+<div class="value" id="vmother"></div>
+</div>
+
+<div class="field">
+<div class="label">Mother's Occupation</div>
+<div class="value" id="vmotherjob"></div>
+</div>
+</div>
+
+<div class="field">
+<div class="label">Language or Dialect Spoken or Written</div>
+<div class="value" id="vlanguage"></div>
+</div>
+
+<div class="field">
+<div class="label">Person to be contacted in case of emergency</div>
+<div class="value" id="vemergency"></div>
+</div>
+
+<div class="field">
+<div class="label">His or Her Address or Telephone</div>
+<div class="value" id="vemergencyDetails"></div>
+</div>
+
+</div>
+
+<!-- EDUCATIONAL BACKGROUND -->
+<div class="card-title">EDUCATIONAL BACKGROUND</div>
+
+<div class="category">
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Elementary</div>
+<div class="value" id="velem"></div>
+</div>
+
+<div class="field">
+<div class="label">Year Graduated</div>
+<div class="value" id="velemYear"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">High School</div>
+<div class="value" id="vhs"></div>
+</div>
+
+<div class="field">
+<div class="label">Year Graduated</div>
+<div class="value" id="vhsYear"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">College</div>
+<div class="value" id="vcollege"></div>
+</div>
+
+<div class="field">
+<div class="label">Year Graduated</div>
+<div class="value" id="vcollegeYear"></div>
+</div>
+</div>
+
+<div class="field">
+<div class="label">Degree Received</div>
+<div class="value" id="vdegree"></div>
+</div>
+
+<div class="field">
+<div class="label">Special Skills</div>
+<div class="value" id="vskills"></div>
+</div>
+
+</div>
+
+<!-- EMPLOYMENT RECORD -->
+<div class="card-title">EMPLOYMENT RECORD</div>
+
+<div class="category">
+
+<!-- FIRST JOB -->
+<div class="inline-row">
+
+<div class="field">
+<div class="label">Company Name</div>
+<div class="value" id="vcompany1"></div>
+</div>
+
+</div>
+
+<div class="inline-row">
+
+<div class="field">
+<div class="label">Position</div>
+<div class="value" id="vposition1"></div>
+</div>
+
+<div class="field">
+<div class="label">From</div>
+<div class="value" id="vfrom1"></div>
+</div>
+
+<div class="field">
+<div class="label">To</div>
+<div class="value" id="vto1"></div>
+</div>
+
+</div>
+
+<br>
+
+<div class="inline-row">
+
+<div class="field">
+<div class="label">Company Name</div>
+<div class="value" id="vcompany2"></div>
+</div>
+
+</div>
+
+<div class="inline-row">
+
+<div class="field">
+<div class="label">Position</div>
+<div class="value" id="vposition2"></div>
+</div>
+
+<div class="field">
+<div class="label">From</div>
+<div class="value" id="vfrom2"></div>
+</div>
+
+<div class="field">
+<div class="label">To</div>
+<div class="value" id="vto2"></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- CHARACTER REFERENCE -->
+<div class="card-title">CHARACTER REFERENCE</div>
+
+<div class="category">
+
+<!-- FIRST REFERENCE -->
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Name</div>
+<div class="value" id="vrefname1"></div>
+</div>
+
+<div class="field">
+<div class="label">Company</div>
+<div class="value" id="vrefcompany1"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Position</div>
+<div class="value" id="vrefposition1"></div>
+</div>
+
+<div class="field">
+<div class="label">Contact No</div>
+<div class="value" id="vrefcontact1"></div>
+</div>
+</div>
+
+<br>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Name</div>
+<div class="value" id="vrefname2"></div>
+</div>
+
+<div class="field">
+<div class="label">Company</div>
+<div class="value" id="vrefcompany2"></div>
+</div>
+</div>
+
+<div class="inline-row">
+<div class="field">
+<div class="label">Position</div>
+<div class="value" id="vrefposition2"></div>
+</div>
+
+<div class="field">
+<div class="label">Contact No</div>
+<div class="value" id="vrefcontact2"></div>
+</div>
+</div>
+
+</div>
+
+<div class="flex-row-gap">
+
+    <div class="flex-item">
+
+<div class="category">
+
+<div class="field">
+<div class="label">Res. Cert. No.</div>
+<div class="value" id="vrescert"></div>
+</div>
+
+<div class="field">
+<div class="label">Contact No.</div>
+<div class="value" id="vidcontact"></div>
+</div>
+
+<div class="field">
+<div class="label">Issued At</div>
+<div class="value" id="vissuedat"></div>
+</div>
+
+<div class="field">
+<div class="label">Issued On</div>
+<div class="value" id="vissuedon"></div>
+</div>
+
+<div class="field">
+<div class="label">SSS</div>
+<div class="value" id="vsss"></div>
+</div>
+
+<div class="field">
+<div class="label">TIN</div>
+<div class="value" id="vtin"></div>
+</div>
+
+<div class="field">
+<div class="label">NBI No.</div>
+<div class="value" id="vnbi"></div>
+</div>
+
+<div class="field">
+<div class="label">Passport No</div>
+<div class="value" id="vpassport"></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDE (CERTIFICATION + SIGNATURE) -->
+<div class="cert-box">
+
+I hereby certify that the above information is true and correct to the best of my knowledge and belief.
+I also understand that any misinterpretation will be considered reason for withdrawal of an offer or subsequqent dismissal if employed.
+
+<div class="signature-box">
+
+    <img id="vSignature">
+
+    <div class="signature-line"></div>
+
+    <strong>Applicant's Signature</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+<div class="button-group">
+    <button onclick="downloadPDF()">Save as PDF</button>
+    <button onclick="window.print()">Print</button>
+    <a href="dashboard.html" class="back-button">Back</a>
+</div>
+
+
+
+<!-- Back button outside the container -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<script src="Js/script.js"></script>
+
+</body>
+</html>

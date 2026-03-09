@@ -1,0 +1,919 @@
+/* ===============================
+   GLOBAL RESET
+=============================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* =========================
+BODY BACKGROUND - ALL PAGES
+========================= */
+body {
+    background-image: url("../Images/body\ bg.jpg"); /* your forest image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ===============================
+   MAIN CONTAINER
+=============================== */
+.container{
+    width:450px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ===============================
+   HEADINGS
+=============================== */
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#1f4037;
+}
+
+/* ===============================
+   FORM ELEMENTS
+=============================== */
+.form-group{
+    margin-bottom:15px;
+    position:relative; /* needed for suggestion box */
+}
+
+label{
+    font-weight:600;
+    font-size:14px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:16px;
+    line-height:1.4;
+}
+
+/* ===============================
+   BUTTONS
+=============================== */
+button{
+    width:100%;
+    padding:12px;
+    background:#1f4037;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#16302a;
+}
+
+.logout{
+    background:crimson;
+}
+
+/* ===============================
+   LINKS
+=============================== */
+a{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    font-size:13px;
+    text-decoration:none;
+    color:#1f4037;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ===============================
+   ERROR TEXT
+=============================== */
+.error{
+    color:red;
+    font-size:13px;
+    margin-top:8px;
+    font-weight: bold;
+}
+
+/* ===============================
+   PASSWORD FIELD
+=============================== */
+.password-wrapper{
+    position:relative;
+    width:100%;
+}
+
+.password-wrapper input{
+    width:100%;
+    height:42px;
+    padding-right:45px;
+}
+
+.password-wrapper .eye{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-37%);
+    cursor:pointer;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear{
+    display:none;
+}
+
+/* ===============================
+   EMAIL SUGGESTION BOX
+=============================== */
+.suggestion-box{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background: rgba(30, 42, 38, 0.85);
+    color: #D9E9D6;
+    border:1px solid #ccc;
+    border-radius:6px;
+    display:none;
+    z-index:10;
+}
+
+.suggestion-item{
+    padding:8px;
+    cursor:pointer;
+}
+
+.suggestion-item:hover{
+    background: rgba(46, 58, 46, 0.6);
+}
+
+/* ===============================
+   CREATE BIODATA PAGE
+=============================== */
+.form-container{
+    width:800px;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+.section-title{
+    margin-top:20px;
+    margin-bottom:10px;
+    font-weight:bold;
+    color:#1f4037;
+    border-bottom:2px solid #1f4037;
+    padding-bottom:5px;
+}
+
+/* ===============================
+   SIGNATURE PAD
+=============================== */
+#signaturePad{
+    width:100%;
+    max-width:400px;
+    height:150px;
+    border:1px solid black;
+    border-radius:6px;
+    cursor:crosshair;
+}
+
+/* ===============================
+   PRE ELEMENT
+=============================== */
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:6px;
+}
+
+/* ===============================
+   LINKS SPECIAL CLASS
+=============================== */
+.links a{
+    display:block;
+    font-size:14px;
+    margin-top:8px;
+    text-align:center;
+    color:#555;
+    font-weight:bold;
+}
+
+.container a{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    font-size:16px;   /* bigger */
+    font-weight:bold; /* bold */
+    color:#1f4037;
+    text-decoration:none;
+}
+
+/* ===============================
+   VIEW BIODATA ONLY
+=============================== */
+
+.view-page{
+    background:#f2f2f2;
+    display:block;
+    min-height:auto;
+}
+
+/* Container */
+.view-page .container{
+    width:1000px;
+    background:white;
+    padding:30px;
+    margin:auto;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.view-page .header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.view-page .header h2{
+    flex:1;
+    text-align:center;
+    margin:0;
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* Photo */
+.view-page .photo-box{
+    width:150px;
+    height:150px;
+    border:1px solid black;
+    overflow:hidden;
+}
+
+.view-page .photo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Section Title */
+.view-page .card-title{
+    background:black;
+    color:white;
+    font-weight:bold;
+    padding:10px;
+    margin-top:10px;
+    border-radius:12px;
+}
+
+/* Category Box */
+.view-page .category{
+    border:1px solid black;
+    border-radius:12px;
+    padding:15px;
+    margin-top:10px;
+}
+
+/* Row */
+.view-page .inline-row{
+    display:flex;
+    gap:30px;
+}
+
+/* Field */
+.view-page .field{
+    display:flex;
+    flex:1;
+    align-items:center;
+    margin:8px 0;
+}
+
+/* Label */
+.view-page .label{
+    min-width:220px;
+    font-weight:bold;
+}
+
+.view-page .label::after{
+    content:" : ";
+}
+
+/* Value */
+.view-page .value{
+    flex:1;
+    border-bottom:1px solid black;
+    min-height:20px;
+}
+
+/* Signature */
+.view-page .signature-box{
+    text-align:center;
+    margin-top:20px;
+    position:relative;
+}
+
+.view-page .signature-line{
+    width:70%;
+    margin:5px auto;
+    border-bottom:1px solid black;
+}
+
+.view-page #vSignature{
+    width:250px;
+    height:60px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto;
+}
+
+/* Flex Gap */
+.view-page .flex-row-gap{
+    display:flex;
+    gap:40px;
+    margin-top:10px;
+}
+
+/* ===============================
+   SIGNATURE PAD (CREATE PAGE)
+=============================== */
+
+#signaturePad {
+    background-color: #ffffff; /* white background for signature box */
+    border: 2px solid #2E3A2E; /* optional forest green border */
+    border-radius: 12px;
+}
+
+
+/* Print */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 5mm;
+    }
+
+    body {
+        background: white !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    button, a {
+        display: none !important;
+    }
+
+    .view-page .container {
+        width: 100% !important;
+        padding: 5px !important;       /* shrink padding */
+        margin: 0 !important;
+        box-shadow: none !important;
+        font-size: 11px !important;    /* slightly smaller text */
+        line-height: 1 !important;     /* tighter lines */
+
+        transform: scale(0.99);         /* shrink more to fit */
+        transform-origin: top center;
+        page-break-inside: avoid;
+    }
+
+    .card-title {
+        margin-top: 4px !important;
+        margin-bottom: 2px !important;
+        padding: 3px !important;
+        font-size: 12px !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .category {
+        padding: 5px !important;
+        margin-top: 3px !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .inline-row {
+        gap: 8px !important;
+    }
+
+    .field {
+        margin: 1px 0 !important;
+    }
+
+    .value {
+        min-height: 12px !important;
+    }
+
+    .flex-row-gap {
+        margin-top: 5px !important;
+        gap: 15px !important;
+    }
+
+    .flex-item .field {
+        margin: 2px 0 !important;
+    }
+
+    #vSignature {
+        width: 140px !important;
+        height: 40px !important;
+    }
+
+    .signature-box {
+        margin-top: 10px !important;
+    }
+    /* ===============================
+   FIX GOVERNMENT + CERTIFICATION POSITION
+=============================== */
+
+    .flex-row-gap {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 30px !important;
+    }
+
+    /* Make government section stay aligned left */
+    .flex-item {
+        flex: 1 !important;
+    }
+
+    /* Move certification to align properly */
+    .cert-box {
+        flex: 1 !important;
+        margin-top: 0 !important;
+        padding-left: 20px !important;
+        text-align: justify;
+        line-height: 1.2;
+    }
+
+    /* Signature alignment fix */
+    .signature-box {
+        margin-top: 20px !important;
+        text-align: center;
+    }
+
+    #vSignature {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+/* ===============================
+   FIX LABEL + UNDERLINE SPACING
+=============================== */
+
+/* Make label narrower so underline is closer */
+.view-page .label{
+    min-width:160px;   /* was 220px */
+}
+
+/* Reduce gap between label and underline */
+.view-page .field{
+    gap:8px;
+}
+
+/* Make underline closer and cleaner */
+.view-page .value{
+    border-bottom:1px solid black;
+    padding-bottom:2px;
+}
+
+/* ===============================
+   FIX EMERGENCY TEXT TOO NEAR LABEL
+=============================== */
+
+.view-page .field{
+    align-items:flex-start;
+}
+
+.view-page .value{
+    padding-left:6px;   /* adds small space from label */
+}
+
+/* ===============================
+   GOVERNMENT ID SECTION BALANCE
+=============================== */
+
+/* Make flex section more balanced */
+.view-page .flex-row-gap{
+    align-items:flex-start;
+}
+
+/* Reduce space between government id fields */
+.view-page .flex-item .field{
+    margin:4px 0 !important;
+}
+
+/* Make government box width controlled */
+.view-page .flex-item{
+    flex:1;
+}
+
+/* ===============================
+   CERTIFICATION TEXT BALANCE
+=============================== */
+
+.view-page .cert-box{
+    flex:1;
+    padding-left:20px;
+    font-size:14px;
+    line-height:1.4;
+    text-align:justify;
+}
+
+/* ===============================
+   SIGNATURE CENTERING + BALANCE
+=============================== */
+
+.view-page .signature-box{
+    margin-top:15px;
+    text-align:center;
+}
+
+.view-page #vSignature{
+    display:block;
+    margin:0 auto;
+}
+
+.view-page .signature-line{
+    width:60%;   /* slightly shorter for balance */
+}
+
+/* ===============================
+   FIX CERTIFICATION POSITION
+=============================== */
+.view-page .cert-box{
+    flex:1;
+    margin-top:30px;
+    padding-left:0;
+    position:relative;
+    left:-10px;   /* adjust this number until it matches */
+}
+
+/* SUPER CLOSE LABEL + UNDERLINE */
+.view-page .field{
+    display:flex;
+    align-items:center;
+    gap:3px;   /* extremely small space */
+}
+
+/* Keep labels same width for alignment */
+.view-page .label{
+    min-width:170px;   /* adjust smaller if you want */
+    font-weight:bold;
+}
+
+/* Underline takes ALL available space */
+.view-page .value{
+    flex:1;
+    border-bottom:1px solid black;
+    min-height:18px;
+    padding-left:2px;
+}
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg,#1f4037,#99f2c8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.dots {
+    margin-top: 15px;
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    40% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* =========================
+BODY BACKGROUND
+========================= */
+
+
+/* =========================
+CONTAINER / LOGIN BOX
+========================= */
+.container {
+    position: relative;
+    width: 380px;
+    padding: 50px 40px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    /* Dark glass effect matching background */
+    background: rgba(30, 42, 38, 0.6); /* semi-transparent dark tone */
+    backdrop-filter: blur(12px); /* blur the background behind */
+    border: 2px solid #FFFFFF; /* white border for contrast */
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    color: #D9E9D6; /* light text for readability */
+}
+
+/* =========================
+HEADER
+========================= */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #D9E9D6;
+}
+
+/* =========================
+INPUTS (UNDERLINE + FOCUS)
+========================= */
+input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgba(217,233,214,0.6); /* underline light */
+    background: transparent;
+    font-size: 16px;
+    color: #D9E9D6;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder for floating effect */
+input::placeholder {
+    color: rgba(217,233,214,0.5);
+}
+
+/* Focus underline */
+input:focus {
+    border-color: #88C9F9; /* light accent for focus */
+}
+
+/* =========================
+BUTTON
+========================= */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    background: #1E2A26; /* dark forest green button */
+    color: #D9E9D6;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #4A7A49; /* lighter forest green on hover */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* =========================
+LINKS - SIZE & COLOR
+========================= */
+.links a {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    font-size: 15px; /* bigger text */
+    font-weight: 500;
+    color: #D9E9D6; /* light forest tone for all links */
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+.links a:hover {
+    color: #88C9F9; /* accent color for hover */
+    text-decoration: underline;
+}
+
+/* Optional: make "Already have an account" match "Forgot Password" */
+a[href="login.html"] {
+    color: #D9E9D6; /* same color as forgot password link */
+}
+
+a[href="login.html"]:hover {
+    color: #88C9F9;
+}
+
+/* =========================
+ERROR MESSAGE
+========================= */
+
+
+/* =========================
+DASHBOARD BUTTONS ONLY (CSS-ONLY)
+========================= */
+.dashboard a,
+.dashboard button {
+    background: #2E3A2E !important; /* dark forest green */
+    color: #D9E9D6 !important;       /* light text */
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.dashboard a:hover,
+.dashboard button:hover {
+    background: #4A7A49 !important; /* lighter forest green on hover */
+    color: #ffffff !important;
+}
+/* ===============================
+   CREATE BIODATA PAGE BACKGROUND ONLY
+=============================== */
+/* =========================
+CREATE BIODATA PAGE BACKGROUND
+========================= */
+body.create-biodata-page {
+    background-image: url("../Images/body\ bg.jpg"); /* forest image */
+    background-size: cover;           /* fills screen */
+    background-position: center;      /* centers image */
+    background-repeat: no-repeat;     
+    background-attachment: fixed;     /* makes image stay in place */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;          /* form starts from top */
+    min-height: 100vh;
+    overflow-y: auto;                 /* scrolls form if content too tall */
+}
+
+/* =========================
+VIEW BIODATA PAGE - ORIGINAL TEXT COLOR
+========================= */
+.view-page, 
+.view-page .container,
+.view-page .field,
+.view-page .label,
+.view-page .value,
+.view-page .category,
+.view-page .header h2,
+.view-page .cert-box {
+    color: black;  /* original dark forest green text */
+}
+/* =========================
+BACK BUTTON STYLE - MATCH ALL BUTTONS
+========================= */
+.back-button {
+    width: 100%;        /* same width as other buttons */
+    padding: 12px;      /* same padding */
+    border: none;
+    border-radius: 8px;
+    background: #1E2A26; /* same dark forest green */
+    color: #D9E9D6 !important;    /* same text color */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px; /* spacing from form or content */
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #4A7A49; /* same hover effect */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.button-group {
+    width: 380px;          /* same width as your container buttons */
+    margin: 20px auto;     /* center below container */
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    gap: 12px;             /* spacing between buttons */
+}
+
+/* Style for <button> and back link */
+.button-group button,
+.button-group .back-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 18px;   /* matches other buttons */
+    background: #1E2A26;   /* dark forest green */
+    color: #D9E9D6;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Hover effect */
+.button-group button:hover,
+.button-group .back-button:hover {
+    background: #4A7A49;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* Target elements that use inline green color */
+[style*="color: green"] {
+    color: #2bc59c !important; /* dark text for contrast */
+    padding: 8px 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE (up to 480px width)
+=============================== */
+@media screen and (max-width: 480px) {
+
+    body, .container, .form-container, .button-group {
+        width: 95% !important;
+        padding: 20px !important;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    input, textarea, button, .back-button {
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+
+    .view-page .container {
+        width: 95% !important;
+        padding: 15px !important;
+    }
+
+    .view-page .inline-row,
+    .view-page .flex-row-gap {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .view-page .label {
+        min-width: 120px !important;
+        font-size: 14px;
+    }
+
+    .view-page .value {
+        font-size: 14px;
+    }
+
+    #signaturePad {
+        height: 120px;
+    }
+}

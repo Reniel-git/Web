@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>
+<body>
+<div class="container">
+    <h2>Forgot Password</h2>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="forgotEmail" placeholder="Enter your email" onfocus="showRecentEmail()"
+        oninput="this.value=this.value.toLowerCase()">
+        <div id="emailSuggestion" class="suggestion-box"></div>
+
+    </div>
+    <div id="forgotError" class="error"></div>
+    <button onclick="checkResetEmail()">Next</button>
+    <a href="login.html">Back to Login</a>
+</div>
+
+<script src="Js/script.js"></script>
+</body>
+</html>
